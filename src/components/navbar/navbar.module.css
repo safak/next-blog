@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 20px;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
