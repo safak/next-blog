@@ -1,4 +1,4 @@
-import styles from './authlinks.module.css';
+import styles from '../navbar/navbar.module.css';
 import Link from "next/link";
 
 const AuthLinks = () => {

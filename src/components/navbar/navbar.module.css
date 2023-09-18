@@ -16,3 +16,42 @@
     display: flex;
     gap: 20px;
 }
+
+.link {
+    animation: scale-logo-reverse .1s ease-in-out 0s;
+}
+
+.link:hover {
+    cursor: pointer;
+    animation: scale-logo .1s ease-in-out 0s;
+    transform: scale(1.25);
+    color: rgb(132, 174, 187);
+}
+
+.logo {
+    animation: scale-logo-reverse .1s ease-in-out 0s;
+}
+
+.logo:hover {
+    cursor: pointer;
+    animation: scale-logo .1s ease-in-out 0s;
+    transform: scale(1.5);
+}
+
+@keyframes scale-logo {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes scale-logo-reverse {
+    from {
+        transform: scale(1.2);
+    }
+    to {    
+        transform: scale(1);
+    }
+}
