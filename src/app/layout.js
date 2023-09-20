@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
           <ThemeProvider>
         <div className="container">
-          <div classname="wrapper">
+          <div className="wrapper">
             <Navbar />
             {children}
             <Footer/>
