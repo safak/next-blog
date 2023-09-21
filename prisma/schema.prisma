@@ -11,32 +11,36 @@ datasource db {
 }
 
 model User {
-  id                    String     @id @default(uuid()) @map("_id")
-  name                  String
-  email                 String?    @unique
-  emailVerified         DateTime?   @map("email_verified")
-  image                 String?
-  createdAt             DateTime   @default(now())
-  updatedAt             DateTime   @updatedAt
-  accounts              Account[]
-  sessions              Session[]
+  id            String    @id @default(uuid()) @map("_id")
+  name          String
+  email         String    @unique
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  accounts      Account[]
+  sessions      Session[]
+  Post          Post[]
+  Comment       Comment[]
+
   @@map("users")
 }
+
 model Account {
-  id                 String    @id @default(cuid()) @map("_id")
-  userId              String    @map("user_id")
-  type                 String?
-  provider           String
-  providerAccountId  String    @map("provider_account_id")
-  token_type         String?
-  refresh_token      String?   
-  access_token       String?   
-  expires_at         Int?
-  scope              String?
-  id_token           String? 
-  createdAt          DateTime  @default(now())
-  updatedAt          DateTime  @updatedAt
-  user               User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                String   @id @default(cuid()) @map("_id")
+  userId            String   @map("user_id")
+  type              String?
+  provider          String
+  providerAccountId String   @map("provider_account_id")
+  token_type        String?
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  scope             String?
+  id_token          String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
   @@map("accounts")
@@ -45,10 +49,10 @@ model Account {
 model Session {
   id           String   @id @default(cuid()) @map("_id")
   userId       String?  @map("user_id")
-  sessionToken String    @map("session_token") @unique
-  accessToken  String?   @map("access_token")
+  sessionToken String   @unique @map("session_token")
+  accessToken  String?  @map("access_token")
   expires      DateTime
-  user         User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
@@ -64,4 +68,37 @@ model VerificationRequest {
   updatedAt  DateTime @updatedAt
 
   @@unique([identifier, token])
+}
+
+model Category {
+  id    String  @id @default(cuid()) @map("_id")
+  slug  String  @unique
+  title String
+  img   String?
+  Posts Post[]
+}
+
+model Post {
+  id        String   @id @default(cuid()) @map("_id")
+  createdAt DateTime @default(now())
+  slug      String   @unique
+  title     String
+  desc      String
+  img       String?
+  views     Int      @default(0)
+  catSlug   String
+  cat       Category @relation(fields: [catSlug], references: [slug])
+  userEmail String
+  user      User     @relation(fields: [userEmail], references: [email])
+  comments Comment[]
+}
+
+model Comment {
+  id        String @id @default(cuid()) @map("_id")
+  createdAt DateTime @default(now())
+  desc      String
+  userEmail String
+  user      User   @relation(fields: [userEmail], references: [email])
+  postSlug String
+  post      Post   @relation(fields: [postSlug], references: [slug])
 }
