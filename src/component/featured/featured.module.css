@@ -1,2 +1,50 @@
 .container{
+  margin-top: 30px;
+
+}
+
+.title{
+    font-size: 96px;
+    font-weight: 300;
+}
+
+.post{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.imgContainer{
+    flex:1;
+    height: 500px;
+    position: relative;
+}
+
+.image{
+    object-fit:cover;
+}
+
+.textContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.postTitle{
+    font-size: 40px;
+}
+
+.postDesc{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--softTextColor);
+}
+
+.button{
+    padding: 16px 24px;
+    border: none;
+    border-radius: 5px;
+    width: max-content;
 }

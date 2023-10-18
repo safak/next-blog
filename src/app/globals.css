@@ -21,6 +21,20 @@ a{
     text-decoration: none;
 }
 
+.dark{
+    --bg:#0f172a;
+    --textColor:#ddd;
+    --softBg:#1f273a;
+    --softTextColor:#a6a6a6;
+}
+
+.light{
+    --bg: white;
+    --textColor:black;
+    --softBg:#f0f0f0;
+    ---softTextColor: #626262
+}
+
 .container {
     min-height: 100vh;
     background-color: var(--bg);
@@ -31,28 +45,31 @@ a{
     max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
 
 @media screen and (max-width: 1536px){
     .wrapper{
         max-width: 1366px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
 @media screen and (max-width: 1280px){
     .wrapper{
         max-width: 1024px;
+        
     }
 }
 
 @media screen and (max-width: 1024px){
     .wrapper{
         max-width: 768px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
