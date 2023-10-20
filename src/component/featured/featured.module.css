@@ -48,3 +48,32 @@
     border-radius: 5px;
     width: max-content;
 }
+
+@media screen and (max-width:1280px) {
+    .title{
+        font-size: 72px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .title{
+        font-size: 64px;
+    }
+    
+
+@media screen and (max-width:768px) {
+    .title{
+        font-size: 48px;
+    }
+
+    .imgContainer{
+        display: none;
+    }
+}
+}
+
+@media screen and (max-width:640px) {
+    .title{
+        font-size: 36px;
+    }
+}

@@ -52,9 +52,9 @@ a{
 
 @media screen and (max-width: 1536px){
     .wrapper{
-        max-width: 1366px;
-        padding-left: 50px;
-        padding-right: 50px;
+        max-width: 1280px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -68,8 +68,8 @@ a{
 @media screen and (max-width: 1024px){
     .wrapper{
         max-width: 768px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

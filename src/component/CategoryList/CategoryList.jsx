@@ -19,7 +19,7 @@ const CategoryList = () => {
               /> 
               Style
           </Link>
-         
+          
           <Link href={`/blog`} 
           className={`${styles.category} ${styles.fashion}`}>
              <Image src="/fashion.png"
