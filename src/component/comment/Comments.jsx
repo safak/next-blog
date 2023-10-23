@@ -44,10 +44,11 @@ const Comments = () => {
                   {item?.user?.image && (
                     <Image
                       src={item.user.image}
-                      alt=""
+                      alt="needed"
                       width={50}
                       height={50}
                       className={styles.image}
+
                     />
                   )}
                   <div className={styles.userInfo}>
