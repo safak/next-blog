@@ -44,7 +44,7 @@ const Comments = () => {
                   {item?.user?.image && (
                     <Image
                       src={item.user.image}
-                      alt="needed"
+                      alt="few things"
                       width={50}
                       height={50}
                       className={styles.image}
