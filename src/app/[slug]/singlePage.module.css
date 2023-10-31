@@ -1,0 +1,74 @@
+.container{
+
+}
+
+.infoContainer{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.textContainer{
+    flex:1;
+}
+
+.title{
+    font-size: 64px;
+    margin-bottom: 50px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.userImageContainer{
+    height: 50px;
+    width: 50px;
+    position: relative;
+
+}
+
+.username{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.userTextContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--softTextColor);
+}
+
+ .avatar{
+    object-fit: cover;
+    border-radius: 50%;
+ }
+
+.imageContainer{
+     flex:1;
+     position: relative;
+     height: 350px;
+}
+
+.image{
+    object-fit: cover;
+}
+
+.content{
+    display: flex;
+    gap: 50px;
+}
+
+.post{
+    flex: 5;
+    margin-top: 60px;
+}
+
+.description p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
