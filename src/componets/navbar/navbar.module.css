@@ -1,3 +1,86 @@
 .container {
-  background-color: rgb(255, 255, 255);
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+  color: var(--logoColor);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  .logo {
+    font-size: 26px;
+    padding-right: 15px;
+  }
+  .links {
+    font-size: 17px;
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .social {
+    display: none;
+  }
+
+  .logo {
+    font-size: 26px;
+    padding-right: 0;
+    text-align: left;
+  }
+  .links {
+    font-size: 17px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .social {
+    display: none;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .links {
+    font-size: 16px;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    padding: 10px;
+  }
+
+  .link {
+    display: none;
+  }
+
+  .links {
+    justify-content: flex-end;
+  }
 }
