@@ -1,0 +1,82 @@
+:root {
+  --bg: white;
+  --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
+  --logoColor: rgb(70, 67, 29);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/** for dark mood  */
+.dark {
+  --bg: #0f172a;
+  --textColor: #ddd;
+  --softBg: #1f273a;
+  --siftTextColor: #a6a6a6;
+  --logoColor: rgb(223, 212, 66);
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--textColor);
+}
+
+.wrapper {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rebeccapurple; */
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media screen and (max-width: 1535px) {
+  .wrapper {
+    max-width: 1366px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    max-width: 100vw;
+    padding: 0;
+  }
+}
