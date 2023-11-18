@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  display: flex;
+  display: none;
 }
 
 .line {
