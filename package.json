@@ -9,10 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
-    "next": "13.4.19",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "^13.5.6",
+    "next": "^13.5.6",
+    "next-auth": "^4.24.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+    "react-dom": "18.2.0",
+    "react-quill": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/safak/next-blog.git",
+  "author": "kvvasu <kvvasu@gmail.com>",
+  "license": "MIT"
 }
