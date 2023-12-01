@@ -29,8 +29,8 @@ a {
   margin-right: auto;
   padding-left: 80px;
   padding-right: 80px;
-  background-color: violet;
 }
+
 
 @media screen and (max-width: 1536px) {
   .wrapper {
