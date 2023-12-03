@@ -4,13 +4,22 @@
 .burger{
     width: 20px;
     height: 16px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    cursor: pointer;
+    display: none;
 }
 .line{
     width: 100%;
     height: 2px;
     background-color: var(--textColor);
+}
+
+@media screen and (max-width:640px) {
+    .burger{
+        display: flex;
+    }
+    .link{
+        display: none;
+    }
 }
