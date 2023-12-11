@@ -41,6 +41,13 @@ a {
   padding-left: 80px;
   padding-right: 80px;
 }
+.ql-container {
+  font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: #b3b3b1;
+}
 
 @media screen and (max-width: 1536px) {
   .wrapper {
