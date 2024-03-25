@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./pagination.module.css";
+import styles from "./menu.module.css";
 
-const Pagination = () => {
-  return <div className={styles.container}>Pagination</div>;
+const Menu = () => {
+  return <div className={styles.container}>Menu</div>;
 };
 
-export default Pagination;
+export default Menu;
